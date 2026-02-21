@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sprint Academy - Crash programs that teach you to build with AI in days, not </title>
+    <meta name="description" content="Applied AI education — intensive crash courses and sprint programs that teach practical AI implementation through hands-on projects.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 80px 20px 60px; color: white; }
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.25);
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-size: 15px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        h1 {
+            font-size: 3.2em;
+            margin-bottom: 25px;
+            font-weight: 900;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            line-height: 1.15;
+        }
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 45px;
+            opacity: 0.95;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        .cta-primary {
+            display: inline-block;
+            background: white;
+            color: #8B5CF6;
+            padding: 20px 50px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.25em;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.25);
+            border: 2px solid transparent;
+        }
+        .cta-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 35px rgba(0,0,0,0.35);
+            border-color: rgba(255,255,255,0.5);
+        }
+        .content-section {
+            background: white;
+            border-radius: 16px;
+            padding: 70px 50px;
+            margin: 50px 0;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+        }
+        h2 {
+            font-size: 2.8em;
+            margin-bottom: 50px;
+            color: #2d3748;
+            text-align: center;
+            font-weight: 800;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #8B5CF6;
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin: 50px 0;
+        }
+        .feature-card {
+            background: linear-gradient(135deg, #F7FAFC 0%, #EDF2F7 100%);
+            padding: 35px;
+            border-radius: 12px;
+            border-left: 5px solid #8B5CF6;
+            transition: all 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .feature-card h3 {
+            color: #8B5CF6;
+            font-size: 1.5em;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+        .feature-card p {
+            color: #4A5568;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        .deliverables-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 45px 0;
+        }
+        .deliverable-item {
+            display: flex;
+            align-items: start;
+            padding: 25px;
+            background: #F7FAFC;
+            border-radius: 10px;
+            border: 2px solid #E2E8F0;
+            transition: all 0.3s;
+        }
+        .deliverable-item:hover {
+            border-color: #8B5CF6;
+            background: white;
+        }
+        .deliverable-item::before {
+            content: "✓";
+            color: #8B5CF6;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-right: 18px;
+            flex-shrink: 0;
+        }
+        .pricing-section {
+            text-align: center;
+            padding: 50px 30px;
+        }
+        .price {
+            font-size: 3.5em;
+            font-weight: 900;
+            color: #8B5CF6;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .price-subtext {
+            font-size: 1.3em;
+            color: #718096;
+            margin: 25px 0;
+            font-weight: 500;
+        }
+        .guarantee-box {
+            background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+            border: 3px solid #10B981;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 50px 0;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(16, 185, 129, 0.2);
+        }
+        .guarantee-box h3 {
+            color: #059669;
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .guarantee-box p {
+            font-size: 1.2em;
+            color: #065F46;
+            line-height: 1.8;
+        }
+        .target-audience {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            padding: 35px;
+            border-radius: 12px;
+            border: 2px solid #F59E0B;
+            margin: 40px 0;
+        }
+        .target-audience h3 {
+            color: #92400E;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .target-audience p {
+            color: #78350F;
+            font-size: 1.15em;
+            line-height: 1.7;
+        }
+        footer {
+            text-align: center;
+            padding: 50px 30px;
+            color: white;
+            background: rgba(0,0,0,0.25);
+            border-radius: 16px;
+            margin-top: 50px;
+            backdrop-filter: blur(10px);
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            .subtitle { font-size: 1.2em; }
+            .features-grid { grid-template-columns: 1fr; }
+            .content-section { padding: 40px 25px; }
+        }
+    </style>
+<!-- Google Analytics (GA4) - Measurement ID to be set by Kiki via KIKI-G11 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">Self-paced + cohort options</div>
+            <h1>AI Sprint Academy — Learn AI by Doing</h1>
+            <p class="subtitle">Crash programs that teach you to build with AI in days, not months. No fluff, just results.</p>
+            <a href="https://aisprintacademy.com" class="cta-primary">Enroll Now</a>
+        </header>
+
+        <div class="content-section"><div class="target-audience"><h3>Perfect For</h3><p>Professionals, freelancers, and entrepreneurs who want to implement AI in their work immediately</p></div></div>
+
+        <div class="content-section">
+            <h2>What You Get</h2>
+            <div class="deliverables-list"><div class="deliverable-item">Self-paced video modules</div><div class="deliverable-item">Hands-on project assignments</div><div class="deliverable-item">AI tool stack setup guides</div><div class="deliverable-item">Community access + peer review</div><div class="deliverable-item">Completion certificate</div></div>
+        </div>
+
+        <div class="content-section"><h2>Challenges We Solve</h2><div class="features-grid"><div class="feature-card"><h3>Challenge #1</h3><p>AI courses are too theoretical</p></div><div class="feature-card"><h3>Challenge #2</h3><p>Don't know which tools to use</p></div><div class="feature-card"><h3>Challenge #3</h3><p>Need results this week, not in 6 months</p></div></div></div>
+
+        <div class="content-section pricing-section">
+            <h2>Investment</h2>
+            <div class="price">$297</div>
+            <p class="price-subtext">Professional solution with transparent pricing</p>
+            <a href="https://aisprintacademy.com" class="cta-primary">Enroll Now</a>
+        </div>
+
+        <div class="guarantee-box"><h3>💯 Our Guarantee</h3><p>7-day money-back guarantee</p></div>
+
+        <footer>
+            <p style="font-size:1.3em; font-weight:600;">&copy; 2026 AI Sprint Academy</p>
+            <p style="margin-top:15px; opacity:0.85;">All rights reserved | Powered by ASI Network</p>
+        </footer>
+    </div>
+</body>
+</html>
